@@ -1,0 +1,42 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.button {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ccc;
+}
+
+.icon {
+    height: 16px; /* Adjust size as needed */
+    width: 16px;
+}
+
+@media (max-width: 768px) {
+    .searchBar {
+        width: 100%;
+    }
+
+    .button {
+        padding: 10px;
+        border-left: 0;
+    }
+}
