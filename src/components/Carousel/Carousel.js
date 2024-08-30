@@ -1,3 +1,4 @@
+// src/components/Carousel/Carousel.js
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
@@ -8,7 +9,7 @@ import styles from './Carousel.module.css';
 
 SwiperCore.use([Navigation]);
 
-const Carousel = ({ albums }) => {
+const Carousel = ({ albums, isSongSection = false }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -40,8 +41,9 @@ const Carousel = ({ albums }) => {
           <SwiperSlide key={album.id}>
             <Card
               imageUrl={album.image}
-              follows={album.follows}
+              follows={album.likes || album.follows}
               albumName={album.title}
+              isSong={isSongSection}
             />
           </SwiperSlide>
         ))}

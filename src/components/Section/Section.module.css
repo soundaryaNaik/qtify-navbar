@@ -11,27 +11,26 @@
 .title {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 20px;
+  color: white; /* Ensures the title is visible */
 }
 
-.showAllBtn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.showAllBtn:hover {
-  background-color: #0056b3;
+.tabs {
+  margin-bottom: 20px;
 }
 
 .albumContainer {
   margin-top: 20px;
 }
 
-.gridLayout {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
+.tab {
+  text-transform: none; /* Ensure tabs are not all uppercase */
+  font-size: 1rem; /* Adjust font size to match the design */
+  color: white !important; /* Ensure the tab text is white */
+  font-weight: normal;
+}
+
+.tab.Mui-selected {
+  font-weight: bold; /* Make the selected tab bold */
+  color: white !important; /* Ensure selected tab text is white */
 }
