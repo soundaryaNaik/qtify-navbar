@@ -1,5 +1,19 @@
-:root {
-    --navbar-bg-color: #1db954;
-    --button-bg-color: #333;
-    --feedback-btn-text-color: green;
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html take up the full width and height */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #000; /* Set background to black */
+}
+
+/* Ensure the main app container takes up the full width */
+#root {
+  width: 100%;
 }

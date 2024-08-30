@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.css';
-import headphonesImage from '../../assets/vibrating-headphone 1-1.png'; // Ensure this path is correct
+import headphonesImage from '../../assets/vibrating-headphone 1-1.png'; // Correct path to your image
 
 const Hero = () => {
   return (
