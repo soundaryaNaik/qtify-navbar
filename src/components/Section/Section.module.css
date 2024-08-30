@@ -1,120 +1,37 @@
 .section {
-  position: relative;
-  background-color: #000; /* Black background */
-  padding: 20px 0;
-  width: 100%;
-  overflow: hidden; /* Prevent overflow */
+  margin: 20px 0;
 }
 
 .sectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 0 20px; /* Add padding to align content within section */
 }
 
 .title {
-  color: #fff;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .showAllBtn {
-  color: #34C94B;
-  font-size: 18px;
-  background: none;
+  background-color: #007bff;
+  color: white;
   border: none;
+  padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.showAllBtn:hover {
+  background-color: #0056b3;
 }
 
 .albumContainer {
-  position: relative;
-  padding: 0 20px; /* Padding to align with section header */
-  display: flex;
-  align-items: center;
+  margin-top: 20px;
 }
 
 .gridLayout {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 20px;
-  justify-content: space-between; /* Ensures even spacing between items */
-}
-
-.albumSwiper {
-  width: 100%; /* Full width of the swiper */
-  padding-bottom: 20px;
-}
-
-.albumSwiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
-.prevBtn, .nextBtn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-  background-color: #34C94B;
-  border-radius: 50%;
-  display: flex; /* Always visible */
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  color: #fff; /* White color for arrow icons */
-  font-size: 24px;
-}
-
-.prevBtn {
-  left: 10px;
-}
-
-.nextBtn {
-  right: 10px;
-}
-
-/* Styling for the chip */
-.follows-chip {
-  background-color: #000; /* Black background for the chip */
-  color: #fff; /* White text color */
-  font-size: 14px;
-  padding: 2px 8px;
-  border-radius: 16px; /* Rounded corners */
-  display: inline-block;
-}
-
-.album-name {
-  color: #fff; /* White color for album name */
-  font-size: 16px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 1200px) {
-  .albumSwiper .swiper-slide {
-    flex-basis: calc((100% / 5) - 20px); /* Adjust number of slides */
-  }
-}
-
-@media (max-width: 1024px) {
-  .albumSwiper .swiper-slide {
-    flex-basis: calc((100% / 4) - 20px); /* Adjust number of slides */
-  }
-}
-
-@media (max-width: 768px) {
-  .albumSwiper .swiper-slide {
-    flex-basis: calc((100% / 2) - 20px); /* Adjust number of slides */
-  }
-}
-
-@media (max-width: 480px) {
-  .albumSwiper .swiper-slide {
-    flex-basis: 100%; /* Single column layout on small screens */
-  }
 }
